@@ -2,7 +2,7 @@
   "name": "z-shots",
   "displayName": "Z shots",
   "version": "0.0.1",
-  "description": "Z-shots is a simle extensions on chrome, when you key in `ALT + 4` a capture page will be popped.",
+  "description": "Z-shots is a simle extensions on chrome, when you key in `ALT + Z` a capture page will be popped.",
   "author": "zhenisbusy",
   "scripts": {
     "dev": "plasmo dev",
@@ -24,8 +24,22 @@
     "typescript": "5.2.2"
   },
   "manifest": {
-    "host_permissions": [
-      "https://*/*"
-    ]
+    "externally_connectable": {
+      "matches": [
+        "<all_urls>"
+      ]
+    },
+    "host_permissions": ["<all_urls>"],
+    "permissions": [
+      "activeTab"
+    ],
+    "commands": {
+      "_execute_action": {
+        "description": "start screenshot",
+        "suggested_key": {
+          "default": "Ctrl+B"
+        }
+      }
+    }
   }
 }
