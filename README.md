@@ -15,7 +15,7 @@
 `left click`: select a start point
 `right click`: select a end point and close the shape
 
-
-# 消息模式确定
-
 # 交互确定
+
+## 启动
+通过快捷键启动

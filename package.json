@@ -24,11 +24,6 @@
     "typescript": "5.2.2"
   },
   "manifest": {
-    "externally_connectable": {
-      "matches": [
-        "<all_urls>"
-      ]
-    },
     "host_permissions": ["<all_urls>"],
     "permissions": [
       "activeTab"

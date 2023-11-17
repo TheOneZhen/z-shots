@@ -1,7 +1,10 @@
-export {}
+import { StatePhase } from "~shared/state"
 
 chrome.action.onClicked.addListener((tab) => {
+  console.log('this tab is', tab)
   chrome.tabs.sendMessage(tab.id, 'start')
 })
 
-/** 通信机制，在background中发送状态转换消息，在content Script中接收消息 */
+chrome.commands.onCommand.addListener((command, tab) => {
+  
+})
