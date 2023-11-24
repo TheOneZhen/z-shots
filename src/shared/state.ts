@@ -11,4 +11,8 @@ export class StateManage {
   constructor () {}
   /** 进行下一步 */
   next () {}
+
+  exit () {
+    this.current = StatePhase.None
+  }
 }
